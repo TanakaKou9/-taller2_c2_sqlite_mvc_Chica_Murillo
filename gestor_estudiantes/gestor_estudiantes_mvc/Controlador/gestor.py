@@ -6,7 +6,7 @@ class GestorEstudiantes:
     def agregar_estudiante(self, nombre, correo, nota):
         try:
             if not nombre or not correo:
-                self.vista.mostrar_mensaje("Por favor, ingrese todos los datos.")
+                return "los datos no pueden ser casillas vacias"
             if not (0.0 <= nota <= 5.0):
                 return "La nota debe estar entre 0.0 y 5.0."
         except Exception as e:
